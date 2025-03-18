@@ -49,9 +49,23 @@ class Basics {
 
     // Enums
     enum Day {
-      SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+      SUNDAY("sun"), MONDAY("mon"), TUESDAY("tue"), WEDNESDAY("wed"), THURSDAY("thu"), FRIDAY("fri"), SATURDAY("sat");
+
+      // Declare a field
+      private String day;
+
+      // Create a constructor
+      Day(String day) {
+        this.day = day;
+      }
+
+      // Getter
+      public String getDay() {
+        return this.day;
+      }
     }
     Day day = Day.MONDAY;
-    System.out.println(day);
+    System.out.println(day); // MONDAY
+    System.out.println(day.getDay()); // mon
   }
 }
